@@ -40,9 +40,9 @@ theme:
   name: material
   language: en
 
-  favicon: assets/images/logos/favicon.ico
+  favicon: assets/images/me.jpeg
 
-  logo: assets/images/logos/logo.png
+  logo: assets/images/me.jpeg
 
   font:
     text: Inter

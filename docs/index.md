@@ -1,55 +1,64 @@
-# KNIME Pipeline
+# Portfolio & CV Hub
 
-Welcome to the documentation hub for the **company** KNIME data pipeline.
-Everything here — workflows, screenshots, graphs, notebooks, and reference
-material — is kept in one place and cross-linked so it can be maintained from a
-single source (see [How-to → Add a new workflow](how-to/add-a-new-workflow.md)).
+Welcome to my personal documentation hub and professional portfolio. Here you can explore my background, experience, technical skills, projects, and educational journey.
 
-## Pipeline at a glance
+## Quick Overview
 
 ```mermaid
 flowchart LR
-    A[Raw sources] --> B[Extract]
-    B --> C[Transform / Reconcile]
-    C --> D[Validate]
-    D --> E[Formatted output]
-    E --> F[Reports & dashboards]
+    A[Background & Journey] --> B[Technical Skills]
+    B --> C[Projects & Analytics]
+    C --> D[Professional Experience]
 ```
-
-## Where to start
 
 <div class="grid cards" markdown>
 
--   :material-rocket-launch: **Getting started**
+-   :material-account-details: **About Me**
 
     ---
 
-    Set up the environment and build the site locally.
+    Learn more about my background, technical interests, and career objectives.
 
-    [:octicons-arrow-right-24: Getting started](getting-started/index.md)
+    [:octicons-arrow-right-24: Read About Me](ABOUT/about-me.md)
 
--   :material-sitemap: **Workflows**
-
-    ---
-
-    One page per KNIME workflow, with its own assets.
-
-    [:octicons-arrow-right-24: Browse workflows](workflows/index.md)
-
--   :material-book-open-variant: **Concepts**
+-   :material-briefcase-check: **Experience**
 
     ---
 
-    Shared ideas and conventions used across the pipeline.
+    Explore my past roles, practical experience, and hands-on technical work.
 
-    [:octicons-arrow-right-24: Concepts](concepts/index.md)
+    [:octicons-arrow-right-24: View Experience](EXPERIENCE/experience.md)
 
--   :material-tools: **How-to**
+-   :material-folder-account: **Projects**
 
     ---
 
-    Practical, repeatable procedures — including adding new features.
+    Detailed documentation for my data pipelines, analytics, and machine learning models.
 
-    [:octicons-arrow-right-24: How-to guides](how-to/index.md)
+    [:octicons-arrow-right-24: View Projects](PROJECTS/projects.md)
+
+-   :material-code-tags: **Skills**
+
+    ---
+
+    Overview of my technical skills across Python, SQL, data tools, and analytics libraries.
+
+    [:octicons-arrow-right-24: View Skills](SKILLS/skills.md)
+
+-   :material-school: **Education**
+
+    ---
+
+    My academic background, continuous learning certifications, and key achievements.
+
+    [:octicons-arrow-right-24: View Education](EDUCATION/education.md)
+
+-   :material-email-outline: **Contact**
+
+    ---
+
+    Get in touch via LinkedIn, email, or view my public code repositories.
+
+    [:octicons-arrow-right-24: Get in Touch](contact.md)
 
 </div>
