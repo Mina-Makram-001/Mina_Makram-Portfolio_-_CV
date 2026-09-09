@@ -1,98 +1,760 @@
-/* =============================================================================
-   LUX Actuaries & Consultancy — brand theme for MkDocs Material
-   Single source of truth for colours & fonts. Edit here only (DRY).
-   ============================================================================= */
+site_name: Mina Makram - Portfolio & CV
+site_description: Data Scientist & Machine Learning Engineer | Personal Portfolio
+site_author: Mina Makram Riad
+site_url: https://github.com/Mina-Makram-001
+
+repo_name: My Github Portfolio
+repo_url: https://github.com/Mina-Makram-001
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+
+  - Tutorials (Getting Started):
+      - Project Overview: tutorials/overview.md
+      - Tech Stack Primer: tutorials/tech-stack.md
+      - Quick Start Guide: tutorials/quick-start.md
+
+  - How-To Guides:
+      - Download & Install: how-to/download-install.md
+      - Configure the Environment: how-to/configuration.md
+      - Prepare the Excel Inputs: how-to/prepare-inputs.md
+      - Run the Workflow: how-to/run-workflow.md
+      - Modify the Pipeline: how-to/modify-pipeline.md
+      - Troubleshoot Common Errors: how-to/troubleshooting.md
+
+  - Reference (Developer Specs):
+      - KNIME Nodes (Inputs & Outputs): reference/knime-nodes.md
+      - Python Script Specifications: reference/python-scripts.md
+      - Excel Data Schemas: reference/excel-schemas.md
+      - Config File Settings: reference/config-settings.md
+
+  - Explanation (Actuarial & System Logic):
+      - Core Triangulation Logic: explanation/triangulation-logic.md
+      - Architecture Design: explanation/architecture.md
+      - Assumptions & Limitations: explanation/assumptions.md
+
+# -----------------------------------------------------------------------------
+# Theme
+# -----------------------------------------------------------------------------
+theme:
+  name: material
+  language: en
+
+  favicon: assets/images/logos/favicon.ico
+
+  logo: assets/images/logos/logo.png
+
+  font:
+    text: Open Sans
+    code: Roboto Mono
+
+  palette:
+    # ─────────────────────────────
+    # LIGHT MODE
+    # ─────────────────────────────
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # ─────────────────────────────
+    # DARK MODE
+    # ─────────────────────────────
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+  features:
+
+    # Navigation
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+
+    # Search
+    - search.suggest
+    - search.highlight
+    - search.share
+
+    # Content
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+
+    # Footer
+    - navigation.footer
+
+/* ==========================================================================
+   MINA MAKRAM — CV & DATA PORTFOLIO
+   ==========================================================================
+   Color system:
+   Navy       #0F172A  → professional / primary
+   Deep Navy  #020617  → dark backgrounds
+   Teal       #14B8A6  → technology / accent
+   Cyan       #22D3EE  → secondary accent
+   Slate      #64748B  → secondary text
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. COLOR SYSTEM
+   ========================================================================== */
+
+/* ---------- LIGHT MODE ---------- */
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #0F172A;
+  --md-primary-fg-color--light: #1E293B;
+  --md-primary-fg-color--dark: #020617;
+
+  --md-accent-fg-color: #0D9488;
+  --md-accent-fg-color--transparent: rgba(13, 148, 136, 0.12);
+
+  --md-default-bg-color: #F8FAFC;
+  --md-default-fg-color: #0F172A;
+  --md-default-fg-color--light: #475569;
+  --md-default-fg-color--lighter: #94A3B8;
+
+  --portfolio-card-bg: #FFFFFF;
+  --portfolio-border: #E2E8F0;
+  --portfolio-muted: #64748B;
+}
+
+
+/* ---------- DARK MODE ---------- */
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0F172A;
+  --md-primary-fg-color--light: #1E293B;
+  --md-primary-fg-color--dark: #020617;
+
+  --md-accent-fg-color: #2DD4BF;
+  --md-accent-fg-color--transparent: rgba(45, 212, 191, 0.12);
+
+  --md-default-bg-color: #020617;
+  --md-default-fg-color: #F1F5F9;
+  --md-default-fg-color--light: #CBD5E1;
+  --md-default-fg-color--lighter: #64748B;
+
+  --portfolio-card-bg: #0F172A;
+  --portfolio-border: #1E293B;
+  --portfolio-muted: #94A3B8;
+}
+
+
+/* ==========================================================================
+   2. GLOBAL
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.md-main {
+  background: var(--md-default-bg-color);
+}
+
+.md-content {
+  max-width: 1100px;
+}
+
+
+/* ==========================================================================
+   3. HEADER
+   ========================================================================== */
+
+.md-header {
+  background: #0F172A;
+  box-shadow: none;
+}
+
+.md-header__title {
+  font-weight: 700;
+}
+
+.md-header__button {
+  color: #F8FAFC;
+}
+
+
+/* ==========================================================================
+   4. NAVIGATION TABS
+   ========================================================================== */
+
+.md-tabs {
+  background: #0F172A;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.md-tabs__link {
+  opacity: 0.75;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+  color: #2DD4BF !important;
+}
+
+.md-tabs__link--active {
+  opacity: 1;
+  color: #2DD4BF !important;
+}
+
+
+/* ==========================================================================
+   5. TYPOGRAPHY
+   ========================================================================== */
+
+.md-typeset {
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h2 {
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  margin-top: 2.2em;
+}
+
+.md-typeset h3 {
+  font-weight: 700;
+}
+
+.md-typeset strong {
+  font-weight: 700;
+}
+
+
+/* ==========================================================================
+   6. LINKS
+   ========================================================================== */
+
+.md-typeset a {
+  color: #0D9488;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.md-typeset a:hover {
+  color: #14B8A6;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: #2DD4BF;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #67E8F9;
+}
+
+
+/* ==========================================================================
+   7. HERO / INTRODUCTION
+   ========================================================================== */
+
+.hero {
+  padding: 3.5rem 2rem;
+  margin: 1rem 0 3rem 0;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(45, 212, 191, 0.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #0F172A 0%,
+      #111827 100%
+    );
+
+  color: #F8FAFC;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+.hero h1 {
+  color: #FFFFFF;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: #CBD5E1;
+  font-size: 1.05rem;
+  max-width: 720px;
+}
+
+.hero .accent {
+  color: #2DD4BF;
+}
+
+
+/* ==========================================================================
+   8. PORTFOLIO CARDS
+   ========================================================================== */
+
+.card {
+  background: var(--portfolio-card-bg);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 14px;
+  padding: 1.4rem;
+  margin: 1rem 0;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #14B8A6;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+
+/* ==========================================================================
+   9. PROJECT CARDS
+   ========================================================================== */
+
+.project-card {
+  background: var(--portfolio-card-bg);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1.25rem 0;
+
+  transition: all 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #14B8A6;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #0D9488;
+}
+
+[data-md-color-scheme="slate"] .project-card h3 {
+  color: #2DD4BF;
+}
+
+
+/* ==========================================================================
+   10. SKILL TAGS
+   ========================================================================== */
+
+.skill {
+  display: inline-block;
+
+  padding: 0.35rem 0.75rem;
+  margin: 0.25rem 0.15rem;
+
+  border-radius: 999px;
+
+  background: rgba(13, 148, 136, 0.10);
+  border: 1px solid rgba(13, 148, 136, 0.22);
+
+  color: #0D9488;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+[data-md-color-scheme="slate"] .skill {
+  background: rgba(45, 212, 191, 0.10);
+  border-color: rgba(45, 212, 191, 0.25);
+  color: #2DD4BF;
+}
+
+
+/* ==========================================================================
+   11. BUTTONS
+   ========================================================================== */
+
+.md-button {
+  border-radius: 9px;
+  font-weight: 700;
+  padding: 0.65rem 1.2rem;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.20);
+}
+
+.md-button--primary {
+  background: #0D9488;
+  border-color: #0D9488;
+  color: #FFFFFF !important;
+}
+
+.md-button--primary:hover {
+  background: #14B8A6;
+  border-color: #14B8A6;
+}
+
+
+/* ==========================================================================
+   12. CODE
+   ========================================================================== */
+
+.md-typeset code {
+  border-radius: 5px;
+  padding: 0.15em 0.35em;
+}
+
+.md-typeset pre {
+  border-radius: 12px;
+}
+
+
+/* ==========================================================================
+   13. TABLES
+   ========================================================================== */
+
+.md-typeset table:not([class]) {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--portfolio-border);
+}
+
+.md-typeset table:not([class]) th {
+  background: #0F172A;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background: rgba(20, 184, 166, 0.05);
+}
+
+
+/* ==========================================================================
+   14. ADMONITIONS
+   ========================================================================== */
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 10px;
+}
+
+
+/* ==========================================================================
+   15. PROFILE / CV SECTION
+   ========================================================================== */
+
+.profile-section {
+  padding: 2rem;
+  margin: 2rem 0;
+
+  background: var(--portfolio-card-bg);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 16px;
+}
+
+.profile-section h2 {
+  margin-top: 0;
+}
+
+
+/* ==========================================================================
+   16. TIMELINE
+   ========================================================================== */
+
+.timeline {
+  border-left: 2px solid #14B8A6;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: "";
+
+  position: absolute;
+  left: -1.91rem;
+  top: 0.35rem;
+
+  width: 11px;
+  height: 11px;
+
+  background: #14B8A6;
+  border-radius: 50%;
+}
+
+
+/* ==========================================================================
+   17. CONTACT
+   ========================================================================== */
+
+.contact-card {
+  padding: 2rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0F172A,
+      #111827
+    );
+
+  border-radius: 16px;
+  color: #F8FAFC;
+
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+}
+
+.contact-card h2 {
+  color: #FFFFFF;
+  margin-top: 0;
+}
+
+.contact-card a {
+  color: #2DD4BF;
+}
+
+
+/* ==========================================================================
+   18. FOOTER
+   ========================================================================== */
+
+.md-footer {
+  background: #020617;
+}
+
+.md-footer-meta {
+  background: #020617;
+}
+
+
+/* ==========================================================================
+   19. SEARCH
+   ========================================================================== */
+
+.md-search__form {
+  border-radius: 8px;
+}
+
+
+/* ==========================================================================
+   20. CONTENT WIDTH
+   ========================================================================== */
+
+.md-grid {
+  max-width: 1250px;
+}
+
+
+/* ==========================================================================
+   21. SELECTION
+   ========================================================================== */
+
+::selection {
+  background: rgba(20, 184, 166, 0.25);
+}
+
+
+/* ==========================================================================
+   22. MOBILE
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+
+  .hero {
+    padding: 2.2rem 1.3rem;
+    border-radius: 14px;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .md-typeset {
+    font-size: 0.9rem;
+  }
+
+  .card,
+  .project-card {
+    padding: 1.15rem;
+  }
+}
+
+
+# -----------------------------------------------------------------------------
+# DRY variables (mkdocs-macros)
+# -----------------------------------------------------------------------------
+extra:
+  brand:
+    dark_blue: "#004475"
+    light_blue: "#68ade0"
+    dark_gray: "#1f1f1f"
+    mid_gray: "#575757"
+    light_gray: "#d9d9d9"
+  author: Mina Makram
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/mina-makram-32b342324/?locale=en
+      name: linkedin
+  generator: false
+
+# -----------------------------------------------------------------------------
+# Plugins
+# -----------------------------------------------------------------------------
+plugins:
+  - search
+  - awesome-pages
+  - macros
+  - glightbox
+  - mkdocs-jupyter:
+      include_source: true
+      execute: false
+  - minify:
+      minify_html: true
+
+# -----------------------------------------------------------------------------
+# Markdown extensions
+# -----------------------------------------------------------------------------
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Link to this section
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.snippets:
+      base_path: [includes, docs/includes]
+      check_paths: false
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+/* =========================================================
+   PREMIUM TYPOGRAPHY
+   ========================================================= */
 
 :root {
-  /* --- LUX brand palette (from the brand guide) --- */
-  --lux-dark-blue:  #004475;
-  --lux-light-blue: #68ade0;
-  --lux-dark-gray:  #1f1f1f;
-  --lux-mid-gray:   #575757;
-  --lux-light-gray: #d9d9d9;
-  --lux-white:      #ffffff;
-
-  /* Primary/secondary typefaces. Open Sans = web font, Arial = safe fallback. */
-  --md-text-font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  --md-text-font: "Inter", sans-serif;
+  --md-code-font: "JetBrains Mono", monospace;
 }
 
-/* Apply the font stack to body + form controls (Open Sans first, Arial fallback) */
-body,
-input,
+/* Main body text */
 .md-typeset {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
 }
 
-/* -----------------------------------------------------------------------------
-   LIGHT MODE  (scheme: default)
-   Header/primary = LUX dark blue, accent/links = LUX light blue.
-   -------------------------------------------------------------------------- */
-[data-md-color-scheme="default"] {
-  --md-primary-fg-color:        #004475;
-  --md-primary-fg-color--light: #185f9a;
-  --md-primary-fg-color--dark:  #003257;
-  --md-primary-bg-color:        #ffffff;
-  --md-primary-bg-color--light: #ffffffcc;
-
-  --md-accent-fg-color:         #68ade0;
-  --md-accent-fg-color--transparent: #68ade01a;
-
-  --md-typeset-a-color:         #004475;
-
-  /* neutral greys from the brand */
-  --md-default-fg-color--light:  #575757;
-  --md-typeset-mark-color:       #68ade04d;
+/* Headings */
+.md-typeset h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
 }
 
-/* -----------------------------------------------------------------------------
-   DARK MODE  (scheme: slate)
-   Keep the header LUX dark blue for brand consistency; page bg = LUX dark grey;
-   links switch to LUX light blue for contrast on dark backgrounds.
-   -------------------------------------------------------------------------- */
-[data-md-color-scheme="slate"] {
-  --md-primary-fg-color:        #004475;
-  --md-primary-fg-color--light: #185f9a;
-  --md-primary-fg-color--dark:  #003257;
-  --md-primary-bg-color:        #ffffff;
-
-  --md-accent-fg-color:         #68ade0;
-
-  --md-typeset-a-color:         #68ade0;
-
-  /* backgrounds tuned to LUX dark/mid grey */
-  --md-default-bg-color:        #1f1f1f;
-  --md-default-fg-color:        #d9d9d9;
-  --md-default-fg-color--light: #d9d9d9;
-  --md-code-bg-color:           #2a2a2a;
-  --md-footer-bg-color:         #171717;
+.md-typeset h2 {
+  font-size: 1.45rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
 }
 
-/* -----------------------------------------------------------------------------
-   Logo — white background so the LUX logo stays legible on the dark-blue header
-   -------------------------------------------------------------------------- */
-.md-header__button.md-logo {
-  padding: 0.2rem 0.35rem;
-}
-.md-header__button.md-logo img,
-.md-header__button.md-logo svg {
-  background: var(--lux-white);
-  padding: 4px 8px;
-  border-radius: 6px;
-  height: 2.1rem;
-  width: auto;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+.md-typeset h3 {
+  font-size: 1.08rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
 }
 
-/* -----------------------------------------------------------------------------
-   Small polish
-   -------------------------------------------------------------------------- */
-/* Section tabs: subtle bottom accent on the active tab */
-.md-tabs__link--active {
-  border-bottom: 2px solid var(--lux-light-blue);
+/* Navigation */
+.md-tabs__link,
+.md-nav__link {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
 }
 
-/* Admonition & code niceties inherit brand accent automatically via variables */
-.md-typeset .md-button--primary {
-  background-color: var(--lux-dark-blue);
-  border-color: var(--lux-dark-blue);
+/* Header */
+.md-header__title {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Buttons */
+.md-button {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Tables */
+.md-typeset table:not([class]) {
+  font-size: 0.78rem;
+}
+
+/* Smaller secondary text */
+.md-typeset small {
+  font-size: 0.72rem;
 }

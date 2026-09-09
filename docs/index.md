@@ -1,6 +1,6 @@
 # KNIME Pipeline
 
-Welcome to the documentation hub for the **{{ company }}** KNIME data pipeline.
+Welcome to the documentation hub for the **company** KNIME data pipeline.
 Everything here — workflows, screenshots, graphs, notebooks, and reference
 material — is kept in one place and cross-linked so it can be maintained from a
 single source (see [How-to → Add a new workflow](how-to/add-a-new-workflow.md)).

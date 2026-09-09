@@ -1,38 +1,37 @@
 site_name: Mina Makram - Portfolio & CV
 site_description: Data Scientist & Machine Learning Engineer | Personal Portfolio
-site_author: Mina Makram
-site_url: https://Tn-data.github.io/doc-insur-data-pipeline/
+site_author: Mina Makram Riad
+site_url: https://github.com/Mina-Makram-001
 
-repo_name: Tn-data/doc-insur-data-pipeline
-repo_url: https://github.com/Tn-data/doc-insur-data-pipeline
+repo_name: My Github Portfolio
+repo_url: https://github.com/Mina-Makram-001
 edit_uri: edit/main/docs/
 
 nav:
   - Home: index.md
 
-  - Tutorials (Getting Started):
-      - Project Overview: tutorials/overview.md
-      - Tech Stack Primer: tutorials/tech-stack.md
-      - Quick Start Guide: tutorials/quick-start.md
+  - About:
+      - About Me: ABOUT/about-me.md
+      - My Journey: ABOUT/journey.md
+      - What I Do: ABOUT/what-i-do.md
+      - What I Seek: ABOUT/what-i-seek.md
 
-  - How-To Guides:
-      - Download & Install: how-to/download-install.md
-      - Configure the Environment: how-to/configuration.md
-      - Prepare the Excel Inputs: how-to/prepare-inputs.md
-      - Run the Workflow: how-to/run-workflow.md
-      - Modify the Pipeline: how-to/modify-pipeline.md
-      - Troubleshoot Common Errors: how-to/troubleshooting.md
+  - Experience:
+      - Experience: EXPERIENCE/experience.md
 
-  - Reference (Developer Specs):
-      - KNIME Nodes (Inputs & Outputs): reference/knime-nodes.md
-      - Python Script Specifications: reference/python-scripts.md
-      - Excel Data Schemas: reference/excel-schemas.md
-      - Config File Settings: reference/config-settings.md
+  - Projects:
+      - Projects: PROJECTS/projects.md
 
-  - Explanation (Actuarial & System Logic):
-      - Core Triangulation Logic: explanation/triangulation-logic.md
-      - Architecture Design: explanation/architecture.md
-      - Assumptions & Limitations: explanation/assumptions.md
+  - Skills:
+      - Skills: SKILLS/skills.md
+
+  - Education:
+      - Education: EDUCATION/education.md
+      - Certifications: EDUCATION/certifications.md
+      - Achievements: EDUCATION/achievements.md
+
+  - Contact:
+      - Contact: contact.md   # Update folder path if located elsewhere
 
 # -----------------------------------------------------------------------------
 # Theme
@@ -40,14 +39,19 @@ nav:
 theme:
   name: material
   language: en
+
   favicon: assets/images/logos/favicon.ico
 
+  logo: assets/images/logos/logo.png
+
   font:
-    text: Open Sans
-    code: Roboto Mono
+    text: Inter
+    code: JetBrains Mono
 
   palette:
+    # ─────────────────────────────
     # LIGHT MODE
+    # ─────────────────────────────
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: custom
@@ -56,7 +60,9 @@ theme:
         icon: material/weather-sunny
         name: Switch to dark mode
 
+    # ─────────────────────────────
     # DARK MODE
+    # ─────────────────────────────
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: custom
@@ -66,30 +72,39 @@ theme:
         name: Switch to light mode
 
   features:
+
+    # Navigation
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
-    - navigation.expand
     - navigation.top
-    - navigation.footer
     - navigation.tracking
-    - toc.follow
+
+    # Search
     - search.suggest
     - search.highlight
     - search.share
+
+    # Content
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
     - content.tooltips
+
+    # Footer
+    - navigation.footer
 
 # -----------------------------------------------------------------------------
 # Custom CSS / JS
 # -----------------------------------------------------------------------------
 extra_css:
   - assets/stylesheets/extra.css
+
 extra_javascript:
   - assets/javascripts/extra.js
+
+
 
 # -----------------------------------------------------------------------------
 # DRY variables (mkdocs-macros)
@@ -103,9 +118,9 @@ extra:
     light_gray: "#d9d9d9"
   author: Mina Makram
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/Tn-data
-      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/mina-makram-32b342324/?locale=en
+      name: linkedin
   generator: false
 
 # -----------------------------------------------------------------------------
