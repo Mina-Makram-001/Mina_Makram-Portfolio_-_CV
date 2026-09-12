@@ -35,18 +35,17 @@ Technology can accelerate exponentially, while adaptation can remain linear, cre
 
 ## Where I Want to Contribute
 
-```text
-        DATA
-     Raw Material
-          ↓
-   MACHINE LEARNING
-      Mechanism
-          ↓
- ARTIFICIAL INTELLIGENCE
-      Next Wave
-          ↓
-       IMPACT
-   What I Want to Build
+```mermaid
+flowchart LR
+    A["📊 DATA<br/><br/>Raw Material"]
+    
+    B["🧠 MACHINE LEARNING<br/><br/>Mechanism"]
+    
+    C["🤖 ARTIFICIAL INTELLIGENCE<br/><br/>Next Wave"]
+    
+    D["🚀 IMPACT<br/><br/>What I Want to Build"]
+
+    A --> B --> C --> D
 ```
 
 ## Discover more:

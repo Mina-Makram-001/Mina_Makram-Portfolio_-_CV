@@ -1,14 +1,4 @@
-# Let's build something together
-
-I am a **Data Scientist and Machine Learning Engineer** specializing in end-to-end data pipelines, statistical modeling, and AI-driven applications. 
-
-Whether you need to transform complex raw datasets into production-grade pipelines, engineer predictive models, or implement LLM workflows, I bring structured analytical rigor and software engineering best practices to every project.
-
----
-
 ## How We Collaborate
-
-Here is how I turn raw data challenges into scalable, production-ready systems:
 
 ```mermaid
 flowchart LR
@@ -19,7 +9,7 @@ flowchart LR
 
 ---
 
-### Contact Information
+### Now let's build something together, contact me through:
 
 | Channel   | Contact Details | Action |
 | :---   | :--- | :--- |

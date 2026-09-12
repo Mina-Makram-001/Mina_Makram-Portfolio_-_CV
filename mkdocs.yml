@@ -12,9 +12,6 @@ nav:
 
   - About:
       - About Me: ABOUT/about-me.md
-      - My Journey: ABOUT/journey.md
-      - What I Do: ABOUT/what-i-do.md
-      - What I Seek: ABOUT/what-i-seek.md
 
   - Experience:
       - Experience: EXPERIENCE/experience.md
@@ -27,9 +24,7 @@ nav:
 
   - Education:
       - Education: EDUCATION/education.md
-      - Certifications: EDUCATION/certifications.md
-      - Achievements: EDUCATION/achievements.md
-
+      
   - Contact:
       - Contact: contact.md   # Update folder path if located elsewhere
 
